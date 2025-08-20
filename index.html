@@ -1,108 +1,821 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>행동바디 R.O.A 2기 모집</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Airsoft_man_holding_AK-type_airsoft_rifle.jpg/800px-Airsoft_man_holding_AK-type_airsoft_rifle.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-    .overlay {
-      background: rgba(0, 0, 0, 0.8);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-    }
-    .card {
-      background: #1e1e1e;
-      padding: 40px;
-      border-radius: 16px;
-      max-width: 600px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 0 40px rgba(255, 165, 0, 0.4);
-    }
-    h1 {
-      color: #ffa500;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #ddd;
-    }
-    ul {
-      text-align: left;
-      margin-top: 20px;
-      padding-left: 20px;
-      color: #ccc;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .button {
-      margin-top: 30px;
-      display: inline-block;
-      padding: 14px 28px;
-      background: #ffa500;
-      color: black;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .footer {
-      margin-top: 40px;
-      font-size: 12px;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>액션 보고서 작성 가이드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              action: '#ff4444',
+              actionLight: '#ff6666',
+              actionDark: '#cc3333'
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body>
-  <div class="overlay">
-    <div class="card">
-      <h1>행동바디 R.O.A 2기 모집</h1>
-      <p>의지력은 장전된 몸에서 시작된다.</p>
-      <p>Reload of Action - 당신의 생존 몸을 재장전하라.</p>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-action mb-4">
+                <i class="fas fa-chart-line mr-3"></i>
+                액션 보고서 작성 가이드
+            </h1>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                효과적인 업무 보고를 위한 체계적 프레임워크<br>
+                <span class="text-sm text-gray-500">기반 이론: OKR, Agile, SMART Goals</span>
+            </p>
+        </header>
 
-      <h2>시즌 구성</h2>
-      <ul>
-        <li>S1: 기초대사 올리기 → 아침 발사 가능한 몸</li>
-        <li>S2: 호흡과 체온 회복 → 내면 온도 재정렬</li>
-        <li>S3: 생존몸 구축 → 사업가 에너지 최적화</li>
-      </ul>
+        <!-- Navigation -->
+        <nav class="mb-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="showSection('problem')" class="nav-btn bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition-colors">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>문제 분석
+                </button>
+                <button onclick="showSection('framework')" class="nav-btn bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+                    <i class="fas fa-cogs mr-2"></i>보고 프레임워크
+                </button>
+                <button onclick="showSection('examples')" class="nav-btn bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors">
+                    <i class="fas fa-star mr-2"></i>우수 사례
+                </button>
+                <button onclick="showSection('tool')" class="nav-btn bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition-colors">
+                    <i class="fas fa-tools mr-2"></i>작성 도구
+                </button>
+            </div>
+        </nav>
 
-      <h2>필독서 7권</h2>
-      <ul>
-        <li>남자는 힘이다</li>
-        <li>돌아온 포스</li>
-        <li>달리기와 존재하기</li>
-        <li>움직임의 힘</li>
-        <li>디지털 미니멀리즘</li>
-        <li>기적을 부르는 뇌</li>
-        <li>몸은 기억한다</li>
-      </ul>
-
-      <h2>철학</h2>
-      <ul>
-        <li>“나는 달리면서 철학자가 되었다.”</li>
-        <li>“움직임은 삶을 바꾼다.”</li>
-        <li>“몸이 장전되면, 삶은 폭발한다.”</li>
-      </ul>
-
-      <a href="https://forms.gle/BnJv1oMUyrccEvbW9" target="_blank" class="button">📌 지금 신청하기</a>
-
-      <div class="footer">© 2025 행동바디 R.O.A</div>
+        <!-- Content Sections -->
+        <main id="content">
+            <!-- Initial loading state -->
+            <div class="text-center py-12">
+                <i class="fas fa-spinner fa-spin text-4xl text-gray-400 mb-4"></i>
+                <p class="text-gray-600">로딩 중...</p>
+            </div>
+        </main>
     </div>
-  </div>
+
+    <!-- 관리자 버튼 (항상 표시) -->
+    <div class="fixed bottom-4 right-4 z-50">
+        <button onclick="window.app && window.app.showAdminPanel ? window.app.showAdminPanel() : alert('관리자 패널을 여는 중입니다...')" 
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg transition-colors">
+            <i class="fas fa-database mr-2"></i>데이터 관리
+        </button>
+    </div>
+
+    <script>
+// 전체 JavaScript 코드를 여기에 인라인으로 포함
+class ReportGuideApp {
+    constructor() {
+        this.currentSection = null;
+        this.frameworkData = null;
+        this.init();
+    }
+
+    async init() {
+        console.log('Loading framework data...');
+        await this.loadFramework();
+        console.log('Framework data loaded, showing initial section...');
+        this.showSection('framework');
+        console.log('Setting up event listeners...');
+        this.setupEventListeners();
+        console.log('App initialization complete');
+    }
+
+    async loadFramework() {
+        try {
+            // GitHub Pages용 정적 데이터
+            this.frameworkData = {
+                structure: {
+                    title: "ACTION 보고 프레임워크 (A.C.T.I.O.N)",
+                    description: "체계적이고 실행 가능한 보고서 작성을 위한 6단계 구조",
+                    steps: [
+                        {
+                            letter: "A",
+                            name: "Accountability (책임)",
+                            description: "전날/이전 기간 행동에 대한 명확한 복기와 결과 보고",
+                            theory: "AAR(After Action Review) 방법론",
+                            questions: [
+                                "계획했던 일을 완료했는가?",
+                                "어떤 결과를 얻었는가?",
+                                "무엇을 배웠는가?"
+                            ]
+                        },
+                        {
+                            letter: "C",
+                            name: "Context (맥락)",
+                            description: "현재 상황과 주요 변수들에 대한 정확한 인식",
+                            theory: "Situational Awareness Theory",
+                            questions: [
+                                "현재 상황은 어떠한가?",
+                                "영향을 미치는 주요 요인들은 무엇인가?",
+                                "제약 조건은 무엇인가?"
+                            ]
+                        },
+                        {
+                            letter: "T",
+                            name: "Time-bound (시간 배분)",
+                            description: "구체적인 시간 계획과 우선순위 설정",
+                            theory: "Time Boxing & Eisenhower Matrix",
+                            questions: [
+                                "각 업무에 얼마의 시간을 할당할 것인가?",
+                                "우선순위는 어떻게 설정할 것인가?",
+                                "데드라인은 언제인가?"
+                            ]
+                        },
+                        {
+                            letter: "I",
+                            name: "Impact (영향/결과)",
+                            description: "예상되는 결과와 핵심 성과 지표 정의",
+                            theory: "OKR (Objectives and Key Results)",
+                            questions: [
+                                "어떤 결과를 기대하는가?",
+                                "성공을 어떻게 측정할 것인가?",
+                                "누구에게 어떤 영향을 미칠 것인가?"
+                            ]
+                        },
+                        {
+                            letter: "O",
+                            name: "Objectives (목표)",
+                            description: "명확하고 측정 가능한 목표 설정",
+                            theory: "SMART Goals Framework",
+                            questions: [
+                                "구체적인 목표는 무엇인가?",
+                                "어떻게 측정할 것인가?",
+                                "달성 가능한가?"
+                            ]
+                        },
+                        {
+                            letter: "N",
+                            name: "Next Actions (다음 행동)",
+                            description: "구체적이고 실행 가능한 액션 플랜", 
+                            theory: "GTD (Getting Things Done) Methodology",
+                            questions: [
+                                "다음에 취할 구체적인 행동은 무엇인가?",
+                                "필요한 자원은 무엇인가?",
+                                "누가, 언제, 어떻게 실행할 것인가?"
+                            ]
+                        }
+                    ]
+                },
+                examples: {
+                    good: {
+                        title: "우수 보고 사례 (해량님 스타일)",
+                        structure: "1. 작일 행동 복기 → 2. 금일 행동 전략 → 3. MUST 업무 보고",
+                        characteristics: [
+                            "구조화된 형식",
+                            "구체적인 액션 아이템",
+                            "시간 기반 계획",
+                            "연속성 있는 복기"
+                        ]
+                    },
+                    bad: {
+                        title: "문제가 있는 보고 사례",
+                        problems: [
+                            "모호한 표현 (\"저녁식사\", \"복기록 작성\")",
+                            "시간 개념 부족 (7시간을 2-3개 활동으로만 채움)",
+                            "추가 질문 유발 (한 번에 명확히 답하지 않음)",
+                            "맥락 파악 실패 (핵심 이슈를 놓침)"
+                        ]
+                    }
+                }
+            };
+        } catch (error) {
+            console.error('Failed to load framework data:', error);
+            this.showError('데이터 로딩에 실패했습니다.');
+        }
+    }
+
+    setupEventListeners() {
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.nav-btn').forEach(b => {
+                    b.classList.remove('ring-2', 'ring-white', 'ring-opacity-50');
+                });
+                btn.classList.add('ring-2', 'ring-white', 'ring-opacity-50');
+            });
+        });
+    }
+
+    showSection(sectionName) {
+        this.currentSection = sectionName;
+        const content = document.getElementById('content');
+        
+        switch (sectionName) {
+            case 'problem':
+                content.innerHTML = this.renderProblemAnalysis();
+                break;
+            case 'framework':
+                content.innerHTML = this.renderFramework();
+                break;
+            case 'examples':
+                content.innerHTML = this.renderExamples();
+                break;
+            case 'tool':
+                content.innerHTML = this.renderReportTool();
+                break;
+            default:
+                content.innerHTML = this.renderFramework();
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    renderProblemAnalysis() {
+        return `
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-red-600 mb-8 text-center">
+                    <i class="fas fa-exclamation-triangle mr-3"></i>
+                    문제가 있는 보고서 분석
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- 나쁜 보고 예시 -->
+                    <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
+                        <h3 class="text-xl font-bold text-red-700 mb-4">❌ 문제가 있는 보고</h3>
+                        <div class="bg-white p-4 rounded border text-sm font-mono">
+                            <p class="text-gray-600 mb-2">"16:00 퇴근하였습니다."</p>
+                            <p class="text-gray-600 mb-2">"퇴근 후 계획은 아래와 같습니다."</p>
+                            <p class="text-gray-600 mb-2">- 팀장님과 저녁 식사</p>
+                            <p class="text-gray-600">- bmw 복기록 작성</p>
+                        </div>
+                    </div>
+
+                    <!-- 좋은 보고 예시 -->
+                    <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                        <h3 class="text-xl font-bold text-green-700 mb-4">✅ 우수한 보고</h3>
+                        <div class="bg-white p-4 rounded border text-sm font-mono">
+                            <p class="text-gray-600 mb-2">"16:00-18:00 팀장님과 신제품 론칭 회의"</p>
+                            <p class="text-gray-600 mb-2">"18:00-19:30 고객 견적 요청 3건 처리"</p>
+                            <p class="text-gray-600 mb-2">"19:30-21:00 파이썬 자동화 강의 2-3강 수강"</p>
+                            <p class="text-gray-600">- 내일 천안 장비 실사 자료 준비 완료</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    renderFramework() {
+        if (!this.frameworkData) {
+            return '<div class="text-center py-12"><i class="fas fa-spinner fa-spin text-4xl text-gray-400"></i></div>';
+        }
+
+        const { structure } = this.frameworkData;
+        
+        return `
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-blue-600 mb-4 text-center">
+                    <i class="fas fa-cogs mr-3"></i>
+                    ${structure.title}
+                </h2>
+                <p class="text-gray-600 text-center mb-12 text-lg">${structure.description}</p>
+
+                <!-- Framework Steps -->
+                <div class="space-y-8">
+                    ${structure.steps.map((step, index) => `
+                        <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-${this.getStepColor(index)}">
+                            <div class="flex items-start space-x-6">
+                                <div class="w-16 h-16 bg-${this.getStepColor(index)} text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                                    ${step.letter}
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold text-gray-800 mb-2">${step.name}</h3>
+                                    <p class="text-gray-600 mb-4 text-lg">${step.description}</p>
+                                    <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                                        <h4 class="font-bold text-gray-700 mb-2">
+                                            <i class="fas fa-graduation-cap mr-2"></i>이론적 근거: ${step.theory}
+                                        </h4>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <h4 class="font-bold text-gray-700">
+                                            <i class="fas fa-question-circle mr-2"></i>핵심 질문들:
+                                        </h4>
+                                        <ul class="space-y-2">
+                                            ${step.questions.map(question => `
+                                                <li class="flex items-start space-x-2">
+                                                    <i class="fas fa-chevron-right text-${this.getStepColor(index)} mt-1 text-sm"></i>
+                                                    <span class="text-gray-700">${question}</span>
+                                                </li>
+                                            `).join('')}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    renderExamples() {
+        return `
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-green-600 mb-8 text-center">
+                    <i class="fas fa-star mr-3"></i>
+                    우수 보고서 사례 분석
+                </h2>
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-green-600 mb-6">해량님 우수 보고 사례</h3>
+                    <p class="text-gray-700 mb-4">구조: 1. 작일 행동 복기 → 2. 금일 행동 전략 → 3. MUST 업무 보고</p>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-green-700 mb-3">📋 핵심 특징</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span class="text-gray-700">구조화된 형식</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span class="text-gray-700">구체적인 액션 아이템</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span class="text-gray-700">시간 기반 계획</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span class="text-gray-700">연속성 있는 복기</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    renderReportTool() {
+        return `
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-purple-600 mb-8 text-center">
+                    <i class="fas fa-tools mr-3"></i>
+                    보고서 작성 도구
+                </h2>
+
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <form id="reportForm" class="space-y-6">
+                        <!-- A - Accountability -->
+                        <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
+                            <label class="block text-lg font-bold text-red-600 mb-3">
+                                A - Accountability (책임/복기)
+                            </label>
+                            <textarea 
+                                id="accountability" 
+                                class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500" 
+                                rows="4" 
+                                placeholder="전날/이전 기간의 행동에 대한 복기를 구체적으로 작성하세요."
+                            ></textarea>
+                        </div>
+
+                        <!-- C - Context -->
+                        <div class="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+                            <label class="block text-lg font-bold text-orange-600 mb-3">
+                                C - Context (맥락/상황)
+                            </label>
+                            <textarea 
+                                id="context" 
+                                class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500" 
+                                rows="3" 
+                                placeholder="현재 상황과 주요 변수들을 설명하세요."
+                            ></textarea>
+                        </div>
+
+                        <!-- T - Time-bound -->
+                        <div class="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500">
+                            <label class="block text-lg font-bold text-yellow-600 mb-3">
+                                T - Time-bound (시간 배분)
+                            </label>
+                            <textarea 
+                                id="timebound" 
+                                class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500" 
+                                rows="4" 
+                                placeholder="구체적인 시간 계획을 작성하세요. 09:00-11:00 업무A ..."
+                            ></textarea>
+                        </div>
+
+                        <!-- I - Impact -->
+                        <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                            <label class="block text-lg font-bold text-green-600 mb-3">
+                                I - Impact (영향/결과)
+                            </label>
+                            <textarea 
+                                id="impact" 
+                                class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" 
+                                rows="3" 
+                                placeholder="예상되는 결과와 영향을 설명하세요."
+                            ></textarea>
+                        </div>
+
+                        <!-- O - Objectives -->
+                        <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <label class="block text-lg font-bold text-blue-600 mb-3">
+                                O - Objectives (목표)
+                            </label>
+                            <textarea 
+                                id="objectives" 
+                                class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                                rows="3" 
+                                placeholder="SMART한 목표를 설정하세요."
+                            ></textarea>
+                        </div>
+
+                        <!-- N - Next Actions -->
+                        <div class="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
+                            <label class="block text-lg font-bold text-purple-600 mb-3">
+                                N - Next Actions (다음 행동)
+                            </label>
+                            <textarea 
+                                id="nextactions" 
+                                class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" 
+                                rows="4" 
+                                placeholder="구체적이고 실행 가능한 액션 플랜을 작성하세요."
+                            ></textarea>
+                        </div>
+
+                        <!-- 버튼들 -->
+                        <div class="flex flex-wrap gap-4 justify-center pt-6">
+                            <button 
+                                type="button" 
+                                onclick="app.validateReport()" 
+                                class="bg-action hover:bg-actionDark text-white px-8 py-3 rounded-lg font-bold transition-colors"
+                            >
+                                <i class="fas fa-check-circle mr-2"></i>보고서 검증하기
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- 검증 결과 -->
+                    <div id="validationResult" class="mt-8 hidden">
+                        <!-- 여기에 검증 결과가 표시됩니다 -->
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    async validateReport() {
+        const formData = {
+            accountability: document.getElementById('accountability').value,
+            context: document.getElementById('context').value,
+            timebound: document.getElementById('timebound').value,
+            impact: document.getElementById('impact').value,
+            objectives: document.getElementById('objectives').value,
+            nextactions: document.getElementById('nextactions').value
+        };
+        
+        // 사용자 정보 수집 (선택사항)
+        const userName = prompt('이름을 입력해주세요 (선택사항):', '') || '익명';
+        const userEmail = prompt('이메일을 입력해주세요 (선택사항):', '') || '';
+
+        try {
+            // GitHub Pages용 정적 검증 로직
+            const validation = {
+                score: 0,
+                feedback: [],
+                suggestions: []
+            };
+            
+            // 간단한 검증 로직
+            if (formData.accountability && formData.accountability.length > 10) {
+                validation.score += 20;
+            } else {
+                validation.feedback.push("복기 내용이 너무 간략합니다");
+                validation.suggestions.push("구체적인 결과와 학습 내용을 추가하세요");
+            }
+            
+            if (formData.timebound && formData.timebound.includes('시간')) {
+                validation.score += 20;
+            } else {
+                validation.feedback.push("시간 계획이 불명확합니다");
+                validation.suggestions.push("각 업무별 소요 시간을 명시하세요");
+            }
+            
+            if (formData.context && formData.context.length > 5) {
+                validation.score += 15;
+            } else {
+                validation.feedback.push("상황 설명이 부족합니다");
+                validation.suggestions.push("현재 상황과 제약 조건을 구체적으로 작성하세요");
+            }
+            
+            if (formData.impact && formData.impact.length > 5) {
+                validation.score += 15;
+            } else {
+                validation.feedback.push("예상 결과가 명확하지 않습니다");
+                validation.suggestions.push("구체적인 성과 지표를 포함하세요");
+            }
+            
+            if (formData.objectives && formData.objectives.length > 5) {
+                validation.score += 15;
+            } else {
+                validation.feedback.push("목표가 구체적이지 않습니다");
+                validation.suggestions.push("SMART 기준에 맞는 목표를 설정하세요");
+            }
+            
+            if (formData.nextactions && formData.nextactions.length > 10) {
+                validation.score += 15;
+            } else {
+                validation.feedback.push("다음 행동이 불분명합니다");
+                validation.suggestions.push("구체적이고 실행 가능한 액션 플랜을 작성하세요");
+            }
+            
+            // 보너스 점수
+            const totalLength = Object.values(formData).join('').length;
+            if (totalLength > 500) {
+                validation.score += 10;
+                validation.feedback.push("충분한 내용으로 작성되었습니다");
+            }
+            
+            // 데이터 수집 (현재는 콘솔에 로그, 나중에 서버로 전송)
+            const reportLog = {
+                timestamp: new Date().toISOString(),
+                name: userName,
+                email: userEmail,
+                score: validation.score,
+                report: formData,
+                feedback: validation.feedback,
+                suggestions: validation.suggestions
+            };
+            
+            console.log('📊 보고서 데이터 수집:', reportLog);
+            
+            // 데이터 저장
+            await this.saveReportData(reportLog);
+            
+            this.showValidationResult(validation);
+        } catch (error) {
+            console.error('Validation failed:', error);
+            this.showError('검증에 실패했습니다. 다시 시도해주세요.');
+        }
+    }
+
+    async saveReportData(reportData) {
+        try {
+            // 로컬 스토리지에 데이터 저장
+            const existingData = JSON.parse(localStorage.getItem('actionReports') || '[]');
+            existingData.push(reportData);
+            localStorage.setItem('actionReports', JSON.stringify(existingData));
+            
+            console.log('✅ 로컬 스토리지 저장 성공');
+            console.log('📊 저장된 데이터:', reportData);
+            
+            this.showSuccessMessage('보고서가 성공적으로 제출되었습니다!');
+            
+            // 관리자 패널 자동 표시
+            setTimeout(() => this.showAdminPanel(), 1000);
+            
+        } catch (error) {
+            console.error('❌ 데이터 저장 실패:', error);
+        }
+    }
+
+    showValidationResult(validation) {
+        const resultDiv = document.getElementById('validationResult');
+        const scoreColor = validation.score >= 80 ? 'green' : validation.score >= 60 ? 'yellow' : 'red';
+        
+        resultDiv.innerHTML = `
+            <div class="bg-white border-2 border-${scoreColor}-300 rounded-lg p-6">
+                <h3 class="text-2xl font-bold text-${scoreColor}-600 mb-4">
+                    <i class="fas fa-chart-bar mr-2"></i>검증 결과
+                </h3>
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-gray-700 font-medium">점수</span>
+                        <span class="text-2xl font-bold text-${scoreColor}-600">${validation.score}/100</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-${scoreColor}-500 h-3 rounded-full transition-all duration-500" style="width: ${validation.score}%"></div>
+                    </div>
+                </div>
+                
+                ${validation.feedback.length > 0 ? `
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-700 mb-3">📋 피드백</h4>
+                        <ul class="space-y-2">
+                            ${validation.feedback.map(feedback => `
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-exclamation-triangle text-yellow-500 mt-1"></i>
+                                    <span class="text-gray-700">${feedback}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                
+                ${validation.suggestions.length > 0 ? `
+                    <div>
+                        <h4 class="font-bold text-gray-700 mb-3">💡 개선 제안</h4>
+                        <ul class="space-y-2">
+                            ${validation.suggestions.map(suggestion => `
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-lightbulb text-blue-500 mt-1"></i>
+                                    <span class="text-gray-700">${suggestion}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+        
+        resultDiv.classList.remove('hidden');
+        resultDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    showAdminPanel() {
+        // 기존 관리자 패널이 있으면 업데이트만
+        let adminPanel = document.getElementById('adminPanel');
+        const reportCount = JSON.parse(localStorage.getItem('actionReports') || '[]').length;
+        
+        if (adminPanel) {
+            document.getElementById('reportCount').textContent = reportCount;
+            adminPanel.style.opacity = '1';
+            return;
+        }
+        
+        adminPanel = document.createElement('div');
+        adminPanel.id = 'adminPanel';
+        adminPanel.className = 'fixed top-4 right-4 bg-white border-2 border-blue-500 rounded-lg p-4 shadow-lg z-50 max-w-md';
+        adminPanel.innerHTML = `
+            <div class="flex justify-between items-center mb-3">
+                <h4 class="font-bold text-blue-600">📊 데이터 관리 패널</h4>
+                <button onclick="this.parentElement.parentElement.remove()" class="text-gray-500 hover:text-gray-700">✕</button>
+            </div>
+            <div class="space-y-2">
+                <button onclick="app.downloadReports()" class="w-full bg-green-500 text-white px-3 py-2 rounded text-sm hover:bg-green-600">
+                    📥 데이터 다운로드 (Excel)
+                </button>
+                <button onclick="app.viewReports()" class="w-full bg-blue-500 text-white px-3 py-2 rounded text-sm hover:bg-blue-600">
+                    👀 데이터 미리보기
+                </button>
+                <button onclick="app.clearReports()" class="w-full bg-red-500 text-white px-3 py-2 rounded text-sm hover:bg-red-600">
+                    🗑️ 데이터 초기화
+                </button>
+            </div>
+            <div class="mt-2 text-xs text-gray-500">
+                저장된 보고서: <span id="reportCount">${reportCount}</span>개
+            </div>
+        `;
+        document.body.appendChild(adminPanel);
+        
+        // 10초 후 반투명으로 변경
+        setTimeout(() => {
+            adminPanel.style.opacity = '0.8';
+        }, 10000);
+    }
+
+    downloadReports() {
+        const data = JSON.parse(localStorage.getItem('actionReports') || '[]');
+        if (data.length === 0) {
+            alert('다운로드할 데이터가 없습니다.');
+            return;
+        }
+        
+        // CSV 형식으로 변환 (엑셀에서 열기 가능)
+        const headers = ['작성일시', '이름', '이메일', '점수', '복기내용', '상황설명', '시간계획', '예상결과', '목표', '다음행동'];
+        const csvData = [headers.join(',')];
+        
+        data.forEach(item => {
+            const row = [
+                item.timestamp,
+                item.name || '익명',
+                item.email || '',
+                item.score || 0,
+                `"${(item.report?.accountability || '').replace(/"/g, '""')}"`,
+                `"${(item.report?.context || '').replace(/"/g, '""')}"`,
+                `"${(item.report?.timebound || '').replace(/"/g, '""')}"`,
+                `"${(item.report?.impact || '').replace(/"/g, '""')}"`,
+                `"${(item.report?.objectives || '').replace(/"/g, '""')}"`,
+                `"${(item.report?.nextactions || '').replace(/"/g, '""')}"`
+            ];
+            csvData.push(row.join(','));
+        });
+        
+        // 파일 다운로드
+        const blob = new Blob(['\uFEFF' + csvData.join('\n')], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `action_reports_${new Date().toISOString().split('T')[0]}.csv`;
+        link.click();
+        
+        this.showSuccessMessage('데이터가 다운로드되었습니다!');
+    }
+
+    viewReports() {
+        const data = JSON.parse(localStorage.getItem('actionReports') || '[]');
+        if (data.length === 0) {
+            alert('조회할 데이터가 없습니다.');
+            return;
+        }
+        
+        const modal = document.createElement('div');
+        modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+        modal.innerHTML = `
+            <div class="bg-white rounded-lg p-6 max-w-4xl max-h-96 overflow-auto">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold">📊 수집된 보고서 데이터</h3>
+                    <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 px-2 py-1 text-sm">작성일시</th>
+                                <th class="border border-gray-300 px-2 py-1 text-sm">이름</th>
+                                <th class="border border-gray-300 px-2 py-1 text-sm">점수</th>
+                                <th class="border border-gray-300 px-2 py-1 text-sm">복기내용 미리보기</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${data.slice(-10).reverse().map(item => `
+                                <tr>
+                                    <td class="border border-gray-300 px-2 py-1 text-xs">${new Date(item.timestamp).toLocaleString('ko-KR')}</td>
+                                    <td class="border border-gray-300 px-2 py-1 text-sm">${item.name || '익명'}</td>
+                                    <td class="border border-gray-300 px-2 py-1 text-sm font-bold ${item.score >= 80 ? 'text-green-600' : item.score >= 60 ? 'text-yellow-600' : 'text-red-600'}">${item.score}</td>
+                                    <td class="border border-gray-300 px-2 py-1 text-xs max-w-xs truncate">${(item.report?.accountability || '').substring(0, 50)}...</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-4 text-sm text-gray-600">
+                    최근 10개 항목 표시 (전체: ${data.length}개) • 전체 데이터는 "데이터 다운로드"로 확인 가능
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    clearReports() {
+        if (confirm('정말로 모든 데이터를 삭제하시겠습니까?\n\n⚠️ 이 작업은 되돌릴 수 없습니다.')) {
+            localStorage.removeItem('actionReports');
+            this.showSuccessMessage('데이터가 초기화되었습니다.');
+            document.getElementById('adminPanel')?.remove();
+        }
+    }
+
+    showSuccessMessage(message) {
+        const successDiv = document.createElement('div');
+        successDiv.className = 'fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+        successDiv.innerHTML = `
+            <i class="fas fa-check-circle mr-2"></i>
+            ${message}
+        `;
+        document.body.appendChild(successDiv);
+        
+        setTimeout(() => {
+            successDiv.remove();
+        }, 3000);
+    }
+
+    getStepColor(index) {
+        const colors = ['red-500', 'orange-500', 'yellow-500', 'green-500', 'blue-500', 'purple-500'];
+        return colors[index] || 'gray-500';
+    }
+
+    showError(message) {
+        const content = document.getElementById('content');
+        content.innerHTML = `
+            <div class="text-center py-12">
+                <i class="fas fa-exclamation-triangle text-4xl text-red-500 mb-4"></i>
+                <p class="text-red-600 text-lg">${message}</p>
+            </div>
+        `;
+    }
+}
+
+// Global functions for navigation
+window.showSection = (section) => {
+    console.log(`Showing section: ${section}`);
+    if (window.app) {
+        window.app.showSection(section);
+    } else {
+        console.error('App not initialized yet');
+        setTimeout(() => {
+            if (window.app) {
+                window.app.showSection(section);
+            }
+        }, 100);
+    }
+};
+
+// Initialize app when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing app...');
+    try {
+        window.app = new ReportGuideApp();
+        console.log('App initialized successfully');
+    } catch (error) {
+        console.error('Failed to initialize app:', error);
+    }
+});
+    </script>
 </body>
 </html>
